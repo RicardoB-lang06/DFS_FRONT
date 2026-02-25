@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getProductos } from '../utils/api/getProductos';
 import Link from 'next/link';
 

@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from 'next/link';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +23,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav>
+          <ul className="flex gap-3">
+            <li><Link href="/">Inicio</Link></li>
+        <li><Link href="/login">Ir al Login</Link></li>
+        <li><Link href="/productos">Ir a Productos</Link></li>
+        <li><Link href="/about">Acerca de</Link></li>
+      </ul>
+        </nav>
         {children}
       </body>
     </html>
